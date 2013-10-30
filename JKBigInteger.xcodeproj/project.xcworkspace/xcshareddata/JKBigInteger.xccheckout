@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E84A43BF-B9F2-487E-9D84-FE618ACA212A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>JKBigInteger</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CD31836B-D1D2-4281-A144-F35F1F85FF8F</key>
+		<string>https://github.com/kirsteins/JKBigInteger.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JKBigInteger.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CD31836B-D1D2-4281-A144-F35F1F85FF8F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kirsteins/JKBigInteger.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CD31836B-D1D2-4281-A144-F35F1F85FF8F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CD31836B-D1D2-4281-A144-F35F1F85FF8F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JKBigInteger</string>
+		</dict>
+	</array>
+</dict>
+</plist>

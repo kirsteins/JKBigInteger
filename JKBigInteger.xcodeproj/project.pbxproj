@@ -39,9 +39,9 @@
 		187E887017959223007E4A8E /* Unit_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Unit_Tests.m; sourceTree = "<group>"; };
 		187E887217959223007E4A8E /* Unit Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Unit Tests-Prefix.pch"; sourceTree = "<group>"; };
 		187E887617959259007E4A8E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		1881B5C1181EFF6D00CAE2BA /* JKBigInteger-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JKBigInteger-Prefix.pch"; path = "Example/JKBigInteger-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		1885AB51178DC63100249C30 /* JKBigInteger */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JKBigInteger; sourceTree = BUILT_PRODUCTS_DIR; };
 		1885AB54178DC63100249C30 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1885AB70178EF21500249C30 /* JKBigInteger-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "JKBigInteger-Prefix.pch"; path = "../Example/JKBigInteger-Prefix.pch"; sourceTree = "<group>"; };
 		1885AB72178EF21500249C30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Example/main.m; sourceTree = SOURCE_ROOT; };
 		1885AB76178EF25000249C30 /* JKBigInteger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JKBigInteger.h; path = JKBigInteger/JKBigInteger.h; sourceTree = "<group>"; };
 		1885AB77178EF25000249C30 /* JKBigInteger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JKBigInteger.m; path = JKBigInteger/JKBigInteger.m; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 		1885AB59178DC63100249C30 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1885AB70178EF21500249C30 /* JKBigInteger-Prefix.pch */,
+				1881B5C1181EFF6D00CAE2BA /* JKBigInteger-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

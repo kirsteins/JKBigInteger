@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 #include "tommath.h"
 
-@interface JKBigInteger : NSObject
+@interface JKBigInteger : NSObject <NSCoding>
+
 - (id)initWithValue:(mp_int *)value;
 - (mp_int *)value;
 
@@ -47,4 +48,5 @@
 - (NSString *)stringValueWithRadix:(int)radix;
 
 - (NSString *)description;
+
 @end
