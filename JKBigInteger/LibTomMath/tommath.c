@@ -1979,7 +1979,7 @@ int mp_init_copy (mp_int * a, mp_int * b)
 int fast_mp_montgomery_reduce (mp_int * x, mp_int * n, mp_digit rho)
 {
   int     ix, res, olduse;
-  mp_word W[MP_WARRAY];
+	mp_word W[MP_WARRAY] = {};
 
   /* get old used count */
   olduse = x->used;
@@ -4870,7 +4870,7 @@ mp_montgomery_setup (mp_int * n, mp_digit * rho)
 
 int mp_fwrite(mp_int *a, int radix, FILE *stream)
 {
-   char *buf;
+   char *buf = NULL;
    int err, len, x;
    
    if ((err = mp_radix_size(a, radix, &len)) != MP_OKAY) {
@@ -5217,7 +5217,7 @@ const char *mp_s_rmap = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs
 int fast_s_mp_mul_digs (mp_int * a, mp_int * b, mp_int * c, int digs)
 {
   int     olduse, res, pa, ix, iz;
-  mp_digit W[MP_WARRAY];
+	mp_digit W[MP_WARRAY] = {};
   register mp_word  _W;
 
   /* grow the destination as required */
