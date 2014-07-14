@@ -13,7 +13,8 @@
 }
 
 - (id)initWithValue:(mp_int *)value {
-	self = [super init];
+
+    self = [super init];
 	
     if (self) {
         mp_init_copy(&m_value, value);
@@ -27,6 +28,7 @@
 }
 
 - (id)initWithUnsignedLong:(unsigned long)unsignedLong {
+
     self = [super init];
     
     if (self) {
@@ -41,6 +43,7 @@
 }
 
 - (id)initWithCString:(char *)cString andRadix:(int)radix {
+
     if (radix < 2 || radix > 64) {
         return nil;
     }
@@ -61,6 +64,7 @@
     return self;
 }
 - (id)initWithCString:(char *)cString {
+    
     int radix = 10;
     return [self initWithCString:cString andRadix:radix];
 }
@@ -70,11 +74,13 @@
 }
 
 - (id)initWithString:(NSString *)string {
+
     int radix = 10;
     return [self initWithCString:(char *)[string UTF8String] andRadix:radix];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
+
     self = [super init];
     
     if (self) {
@@ -97,17 +103,19 @@
     return self;
 }
 - (void)encodeWithCoder:(NSCoder *)encoder {
-	mp_clamp(&m_value);
 
-	NSData *data = [NSData dataWithBytes:(const void *)m_value.dp
-								  length:m_value.alloc * sizeof(mp_digit)];
+    mp_clamp(&m_value);
 
-	[encoder encodeObject:data forKey:@"JKBigIntegerDP"];
-	[encoder encodeInteger:m_value.alloc forKey:@"JKBigIntegerAlloc"];
-	[encoder encodeInteger:m_value.sign forKey:@"JKBigIntegerSign"];
+    NSData *data = [NSData dataWithBytes:(const void *)m_value.dp
+                                  length:m_value.alloc * sizeof(mp_digit)];
+
+    [encoder encodeObject:data forKey:@"JKBigIntegerDP"];
+    [encoder encodeInteger:m_value.alloc forKey:@"JKBigIntegerAlloc"];
+    [encoder encodeInteger:m_value.sign forKey:@"JKBigIntegerSign"];
 }
 
 - (id)add:(JKBigInteger *)bigInteger {
+
     mp_int sum;
     mp_init(&sum);
     
@@ -120,6 +128,7 @@
 }
 
 - (id)subtract:(JKBigInteger *)bigInteger {
+
     mp_int difference;
     mp_init(&difference);
     
@@ -132,6 +141,7 @@
 }
 
 - (id)multiply:(JKBigInteger *)bigInteger {
+
     mp_int product;
     mp_init(&product);
     
@@ -144,6 +154,7 @@
 }
 
 - (id)divide:(JKBigInteger *)bigInteger {
+
     int result;
     mp_int quotient;
     mp_init(&quotient);
@@ -161,6 +172,7 @@
 }
 
 - (id)remainder:(JKBigInteger *)bigInteger {
+
     int result;
     mp_int remainder;
     mp_init(&remainder);
@@ -178,6 +190,7 @@
 }
 
 - (NSArray *)divideAndRemainder:(JKBigInteger *)bigInteger {
+
     int result;
     mp_int quotient, remainder;
     mp_init_multi(&quotient, &remainder, NULL);
@@ -196,6 +209,7 @@
 }
 
 - (id)pow:(unsigned int)exponent {
+
     int result;
     mp_int power;
     mp_init(&power);
@@ -213,6 +227,7 @@
 }
 
 - (id)negate {
+
     mp_int negate;
     mp_init(&negate);
     mp_neg(&m_value, &negate);
@@ -224,6 +239,7 @@
 }
 
 - (id)abs {
+
     mp_int absolute;
     mp_init(&absolute);
     mp_abs(&m_value, &absolute);
@@ -235,6 +251,7 @@
 }
 
 - (id)bitwiseXor:(JKBigInteger *)bigInteger {
+
     mp_int xor;
     mp_init(&xor);
     mp_xor(&m_value, [bigInteger value], &xor);
@@ -246,6 +263,7 @@
 }
 
 - (id)bitwiseOr:(JKBigInteger *)bigInteger {
+
     mp_int or;
     mp_init(&or);
     mp_or(&m_value, [bigInteger value], &or);
@@ -257,6 +275,7 @@
 }
 
 - (id)bitwiseAnd:(JKBigInteger *)bigInteger {
+
     mp_int and;
     mp_init(&and);
     mp_and(&m_value, [bigInteger value], &and);
@@ -268,6 +287,7 @@
 }
 
 - (id)shiftLeft:(unsigned int)n {
+
     mp_int lShift;
     mp_init(&lShift);
 	mp_mul_2d(&m_value, n, &lShift);
@@ -279,6 +299,7 @@
 }
 
 - (id)shiftRight:(unsigned int)n {
+
     mp_int rShift;
     mp_init(&rShift);
     mp_div_2d(&m_value, n, &rShift, NULL);
@@ -289,6 +310,7 @@
     return newBigInteger;
 }
 - (id)gcd:(JKBigInteger *)bigInteger {
+
     int result;
     mp_int gcd;
     mp_init(&gcd);
@@ -306,6 +328,7 @@
 }
 
 - (NSComparisonResult) compare:(JKBigInteger *)bigInteger {
+
     NSComparisonResult comparisonResult;
     comparisonResult = mp_cmp([bigInteger value], &m_value);
     
@@ -317,7 +340,7 @@
         case MP_LT:
             return NSOrderedDescending;
         default:
-			return 0;
+            return 0;
     }
 }
 
@@ -326,11 +349,13 @@
 }
 
 - (NSString *)stringValue {
+
     int radix = 10;
     return [self stringValueWithRadix:radix];
 }
 
 - (NSString *)stringValueWithRadix:(int)radix {
+
     int stringSize;
     mp_radix_size(&m_value, radix, &stringSize);
     char cString[stringSize];

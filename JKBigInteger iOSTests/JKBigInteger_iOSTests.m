@@ -41,15 +41,15 @@
     NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *filePath = [rootPath stringByAppendingPathComponent:@"file.file"];
 
-	// test 1
-	JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"1111222233334444555566667777888899990000"];
+    // test 1
+    JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"1111222233334444555566667777888899990000"];
     [NSKeyedArchiver archiveRootObject:int1 toFile:filePath];
 
     JKBigInteger *int2 = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
     STAssertEqualObjects([int1 stringValue], [int2 stringValue], @"Test archiving failed!");
 
-	// test2
-	int1 = [[JKBigInteger alloc] initWithString:@"-123471238940713294701327508917230516230561320512352315021305012395091032950923520395013258623185465463545681428354162345612435416523"];
+    // test2
+    int1 = [[JKBigInteger alloc] initWithString:@"-123471238940713294701327508917230516230561320512352315021305012395091032950923520395013258623185465463545681428354162345612435416523"];
     [NSKeyedArchiver archiveRootObject:int1 toFile:filePath];
 
     int2 = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
@@ -11369,7 +11369,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"101101001110010001000000011100010000000101100111101101100110010010001101010111100000100101100001001110110101011010111011000101111111101100100101000000101101011110110010111001111001000101001111111000001001110011000001111001100001111110101001010001011110111011010111001110111010111" andRadix:2];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"11001011111010101000111110000000110011101110110011011001000001000001000100001010010011111011100010010100101001011000101100010100001000011111010000101001100110110011001001010101100110110100010101101110100110101011110001111110010110010000001100000111" andRadix:2];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:2], @"11", @"GCD test 34 failed");
 }
 
@@ -11377,7 +11377,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"176543533714230300143332057760132342565317350147331725555473751017120714053374035065362621001225057701325575476" andRadix:8];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"2777664532114310375465640474672" andRadix:8];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:8], @"46", @"GCD test 35 failed");
 }
 
@@ -11385,7 +11385,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"100011111101000101110001000100111101001001101011000101110111001011110110101111110110001000110101011001100010011100110011101111000011111100110010011111101110111001111011010111101011000001000111100111100000100011101111101101000101110111010001100101000101001001001111001111101010101001010100011010010110111001000000111111000000000101111" andRadix:2];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"10010011011101100010101010001101100011101110000" andRadix:2];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:2], @"1", @"GCD test 36 failed");
 }
 
@@ -11393,7 +11393,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"137457654162124641131042443400334404700570356033403576601177" andRadix:8];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"234423161277552235661320464205447760507560751203736355301314474661177065434447271767" andRadix:8];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:8], @"1", @"GCD test 37 failed");
 }
 
@@ -11401,7 +11401,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"8048840590615499837892983259273089778843570718417119018196324809181" andRadix:10];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"43404629818313135660969581013699" andRadix:10];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:10], @"1", @"GCD test 38 failed");
 }
 
@@ -11409,7 +11409,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"399361667571953448938291141830765420549828932517265336070537947927996834269083798" andRadix:10];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"7" andRadix:10];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:10], @"1", @"GCD test 39 failed");
 }
 
@@ -11417,7 +11417,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"27ce8b914d4be3ad419f4e9c86c64c8a499886a2a686e00f605e221f94a6c83adf1d882e131a0" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"51a494f0d138bbc" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"4", @"GCD test 40 failed");
 }
 
@@ -11425,7 +11425,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"1ab18614eeab9d7912ffebaa" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"1231893ad1bc8172edca63d36ccd3622f431f389ceb9f27bdb3b" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"3", @"GCD test 41 failed");
 }
 
@@ -11433,7 +11433,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"110101010011000111101011100101011100000010010010001010100011110011" andRadix:2];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"10101010110111111001010101000111000111110100001000110101011101001111000110100011110000001001011010100101111010110011" andRadix:2];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:2], @"11", @"GCD test 42 failed");
 }
 
@@ -11441,7 +11441,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"455558363607870455750327086404163729341855580239410495149841014612" andRadix:10];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"4856504102451406211515310166749428011" andRadix:10];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:10], @"1", @"GCD test 43 failed");
 }
 
@@ -11449,7 +11449,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"4884990086277656219" andRadix:10];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"30945682929419" andRadix:10];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:10], @"1", @"GCD test 44 failed");
 }
 
@@ -11457,7 +11457,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"485374467377355733657334222903494539446897530038271" andRadix:10];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"817984178612880507090788568072629" andRadix:10];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:10], @"1", @"GCD test 45 failed");
 }
 
@@ -11465,7 +11465,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"1957921776226fabf2ad178fff3455b931d19b39b4ddd6bca6c424f5db05a509a6c" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"4398433b8d68c9d391643dac2889f7791fba880ca7" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"1", @"GCD test 46 failed");
 }
 
@@ -11473,7 +11473,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"35120bdd2745b47608898a06a5ec8ed1902f0" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"3a7fb0eae2a58dd0815a187a95aaada5eb1c450a6b9552f28c51d1772c7b2b1358c4f01a6e6" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"2", @"GCD test 47 failed");
 }
 
@@ -11481,7 +11481,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"72611162745013033774652664613537264234444637452011565514722265226046072211145733460" andRadix:8];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"220622233721500245624063155322040131421351055765303" andRadix:8];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:8], @"1", @"GCD test 48 failed");
 }
 
@@ -11489,7 +11489,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"35705060577244116104124240701557245450421246661731043030245753" andRadix:8];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"6635171137234207000614225051477345263223335521140647343704750101471456520" andRadix:8];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:8], @"1", @"GCD test 49 failed");
 }
 
@@ -11497,7 +11497,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"11101000100111010010111000110100000010011101001111001010111011111011011100110010001001000111101001100101100111111001100101100101101001001010111000100101111011000010101111101100101011101011111011001110011010100" andRadix:2];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"11110100111110000101101011011010110010000000001110000100001" andRadix:2];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:2], @"1", @"GCD test 50 failed");
 }
 
@@ -11505,7 +11505,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"e7f2bb01c4" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"12492b7d0725e950b59aecfa36610a41252021395a1ec18aa62f5eb0a83" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"1", @"GCD test 51 failed");
 }
 
@@ -11513,7 +11513,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"1a2963dce9f3582c7d144d" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"c3b8f" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"1", @"GCD test 52 failed");
 }
 
@@ -11521,7 +11521,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"100000011011111000101100111000100110100010010110001111111110110101010111011000000000110101100110001110010000101001110101001101111011101111011101111011" andRadix:2];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"1010110100111101001001001100000100100" andRadix:2];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:2], @"1", @"GCD test 53 failed");
 }
 
@@ -11529,7 +11529,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"106357227237743" andRadix:8];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"141634524567677642070553242402741464235370655612161542026026541161765567244061527300231032767750653310343374" andRadix:8];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:8], @"1", @"GCD test 54 failed");
 }
 
@@ -11537,7 +11537,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"10000011001101011111100111101010111001001101110011101011001011111010100001001001101100001001001100010000101010011001000001011111010100111011000001110001010010111010111111011101000000001001111100011110011001110010001011010101000100011000" andRadix:2];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"100111110111000101011111101111101111011010" andRadix:2];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:2], @"10", @"GCD test 55 failed");
 }
 
@@ -11545,7 +11545,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"9a57b6fb1ee8f7e21beb3129fec81248eb659ff58de8cecbf9512ede430fe42beb700186d76f07b" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"15e580257bc99b091c2" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"3", @"GCD test 56 failed");
 }
 
@@ -11553,7 +11553,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"542302766104733360533670050756575057656167" andRadix:8];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"23640355" andRadix:8];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:8], @"5", @"GCD test 57 failed");
 }
 
@@ -11561,7 +11561,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"55" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"a3dbcba7bceb78b502556ec95402b712ed98753033842363b88a8853138de9bca713866fb2babb6718" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"1", @"GCD test 58 failed");
 }
 
@@ -11569,7 +11569,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"165344223842005797221993585130707508301640492630683397182363466512268454850100468" andRadix:10];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"99047486890640922" andRadix:10];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:10], @"2", @"GCD test 59 failed");
 }
 
@@ -11577,7 +11577,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"5935ed8dd62b1b35543189895f" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"eaafcea57e" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"3", @"GCD test 60 failed");
 }
 
@@ -11585,7 +11585,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"1ec7e2dee9204" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"31a8a542ee4a59316e1b68081ca1a03137006a7ce846802b4054d457e457d" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"1", @"GCD test 61 failed");
 }
 
@@ -11593,7 +11593,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"1825856378714929504027978067627917728032773827926861347766691468187524105" andRadix:10];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"34090265778679" andRadix:10];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:10], @"1", @"GCD test 62 failed");
 }
 
@@ -11601,7 +11601,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"43146564050221713476714341630520261776302377547515165700321554445" andRadix:8];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"54031243350314573213560512754427625056515" andRadix:8];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:8], @"1", @"GCD test 63 failed");
 }
 
@@ -11609,7 +11609,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"143016337306423577240524321432503121705711007636131661541600032147732104163543775" andRadix:8];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"266757017663157257325737740636726400212454640337055001155062102333212" andRadix:8];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:8], @"1", @"GCD test 64 failed");
 }
 
@@ -11617,7 +11617,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"172d73d82943b9d5878f39d350b0b66a1b58ccacf8" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"1abebf5c7209e8468d646dd71d2b1046c" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"4", @"GCD test 65 failed");
 }
 
@@ -11625,7 +11625,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"1001011011011000001001110100110" andRadix:2];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"101000110011100100110111100000000010010010010100110100000001111100000000100011100101000" andRadix:2];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:2], @"10", @"GCD test 66 failed");
 }
 
@@ -11633,7 +11633,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"3187295013124501295909185953801176140279688642136912235899507412911958576053852" andRadix:10];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"88" andRadix:10];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:10], @"4", @"GCD test 67 failed");
 }
 
@@ -11641,7 +11641,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"1101100000001011010000010111101001101011101110010110111011111011000101001110000101111001100110111001100011011000001100101010101110111110000110101111001110000000011" andRadix:2];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"101010001101011111010000111010011001000010110011000100111111001011001001100101111111100011000000001110011010111100111111011001100100100000000000001111" andRadix:2];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:2], @"1", @"GCD test 68 failed");
 }
 
@@ -11649,7 +11649,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"29eef98d5fcf059e5af220" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"2832490311adc96efd37fbc86a6957566cce2ff41" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"1", @"GCD test 69 failed");
 }
 
@@ -11657,7 +11657,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"2239d94153753be74a5253e321151763ee3d27e2f4526344acd2b" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"afde5eab9a385f9145a8cc02c70223b4e25ff2727c4752a34500238a5de796daf3ed0d4f93" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"1", @"GCD test 70 failed");
 }
 
@@ -11665,7 +11665,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"33045624697760355" andRadix:10];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"140683382831124637573633386790042466005156307356186854075363235964914" andRadix:10];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:10], @"59", @"GCD test 71 failed");
 }
 
@@ -11673,7 +11673,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"18f253d71e5309209bbaa2e9012ce7d" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"1bbdc63eb4dbb8cdea4eead7316f4e62ab8b85be4ae4832119a8f" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"11", @"GCD test 72 failed");
 }
 
@@ -11681,7 +11681,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"1a34e3b5b82e28a92ea073938f656bccecc13d78d462e71bc21f1c113c6422b08ec079c51d4cd1b039" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"58791407653597570917ce8fb66bc935b09e2e5a21553e445e2c1c7bd8a97e31b76f3a45413e51f" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"1", @"GCD test 73 failed");
 }
 
@@ -11689,7 +11689,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"67669208509087804251074458155182295113389587656053922646011273385440369" andRadix:10];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"468950384022438262643990991565378727342893711139750361136129" andRadix:10];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:10], @"1", @"GCD test 74 failed");
 }
 
@@ -11697,7 +11697,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"3170336753225716447175200405345117306755072723467623752136354" andRadix:8];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"320013111106123124454234673140452423742740174435762564204710235422641510222066342776454165454011372564667730736" andRadix:8];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:8], @"2", @"GCD test 75 failed");
 }
 
@@ -11705,7 +11705,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"13" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"20f943cdf8ef" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"1", @"GCD test 76 failed");
 }
 
@@ -11713,7 +11713,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"3252220561617" andRadix:8];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"3001422716024325050" andRadix:8];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:8], @"1", @"GCD test 77 failed");
 }
 
@@ -11721,7 +11721,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"901821818913138049699970468943838395793265433369634639746784294519843216933742272" andRadix:10];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"41135233" andRadix:10];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:10], @"1", @"GCD test 78 failed");
 }
 
@@ -11729,7 +11729,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"a1069243022c78744b673a313d913d0f5b06f14b" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"157" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"1", @"GCD test 79 failed");
 }
 
@@ -11737,7 +11737,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"4eee12e6cd603e699b74715769f26858b077ff4dbdd7c503d4d1b5bdf5ab017" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"b30712172364ee0e166" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"3", @"GCD test 80 failed");
 }
 
@@ -11745,7 +11745,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"85659556440063263853061468533170851077462956746889409107025040623884135" andRadix:10];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"210895074120884096023791819971545898381867957847355457402950040222940649" andRadix:10];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:10], @"1", @"GCD test 81 failed");
 }
 
@@ -11753,7 +11753,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"100101111110101111011010101110011001010100011010001000100100000010110000110011110010111000111101" andRadix:2];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"111000100110011110000100001001100011010011101010001110111100110001001000000001" andRadix:2];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:2], @"1", @"GCD test 82 failed");
 }
 
@@ -11761,7 +11761,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"111011101001011010011100111110111111111101001100101110000111101010001111110011101100011000010100110100110001011000011101010000000001110010" andRadix:2];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"1010100011011000110111101111011001001011101101101000100010101010101010101110101000111011110111000101011100110100110001101110110101000001011111110000011010100101111110011101010011100100011010000010111111010101010000111100011101011101010010000101011110101011101010111011010011010001110000010" andRadix:2];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:2], @"10", @"GCD test 83 failed");
 }
 
@@ -11769,7 +11769,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"13711266353060" andRadix:8];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"420575120152042603037630620655" andRadix:8];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:8], @"1", @"GCD test 84 failed");
 }
 
@@ -11777,7 +11777,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"11011110001010101101111100011110000110010110011101101010011010100111111110010011001100110101010111100000110111000111001101001111010100100110010101000101000000101101001110100101001111100111010010100111110011001100000001001011001000010111110101111111000100001110010111100" andRadix:2];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"10011100111001100" andRadix:2];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:2], @"100", @"GCD test 85 failed");
 }
 
@@ -11785,7 +11785,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"15030763202713525627073264060343674755260360671453303" andRadix:8];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"624472512661325656713376451031102427000712532" andRadix:8];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:8], @"1", @"GCD test 86 failed");
 }
 
@@ -11793,7 +11793,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"110011000110" andRadix:2];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"11111001011000010000111110010111111110101111001100011100101001110110011101010110001011001000110000001111100000111101011011110100100101010011011001100010100111101110001100100101101001100110000111111010000100010000" andRadix:2];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:2], @"1010", @"GCD test 87 failed");
 }
 
@@ -11801,7 +11801,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"1024005732107765175254074252712507573053154067711010403753647045154042436463075003606427106104640" andRadix:8];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"4336667742033122460305353" andRadix:8];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:8], @"1", @"GCD test 88 failed");
 }
 
@@ -11809,7 +11809,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"1011001001001101010101100111011111111100001000111100001011011010010100010100111110000100001011001011000010010011101010100010010001101010100000011110011011001110001110100011111100100000110011101110001110100110" andRadix:2];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"10101011111100111110111111111001010011000100011000010010110000111111101000111100010111111100001001011100101101110101111011010010101011010011001010000010100010011010101100001111011110111111000101100000010010110011001101110100010100000111000000110110100001010011100011111" andRadix:2];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:2], @"11", @"GCD test 89 failed");
 }
 
@@ -11817,7 +11817,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"60245697071842380552674071801347420655630001153523848707692862726090139766441207811653967695852662" andRadix:10];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"558367382805788293543717214850226339714041666127865837403759" andRadix:10];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:10], @"1", @"GCD test 90 failed");
 }
 
@@ -11825,7 +11825,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"1101001111001000001010011010110010100111011010010100011010000100111001100001110" andRadix:2];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"100101011011011110100001" andRadix:2];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:2], @"1", @"GCD test 91 failed");
 }
 
@@ -11833,7 +11833,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"27b720" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"1a1ce4766f41345ffd79c248ac7d997aced4fd2581bfe2b09a16ee3760afadf5" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"1", @"GCD test 92 failed");
 }
 
@@ -11841,7 +11841,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"5430280790521950823444559210812100821938949930" andRadix:10];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"26665029269224543435586963302400087717310268601209385" andRadix:10];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:10], @"5", @"GCD test 93 failed");
 }
 
@@ -11849,7 +11849,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"71367706076725613066596920327099694884107236790333884680333700230920638733055" andRadix:10];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"61102113441392168768507987827529402798520096548525781661784978599135559733303864328406852799693" andRadix:10];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:10], @"3", @"GCD test 94 failed");
 }
 
@@ -11857,7 +11857,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"343e5830d990aa038c722e" andRadix:16];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"86a9fdbd42e" andRadix:16];
     JKBigInteger *result = [int1 gcd:int2];
-
+    
     STAssertEqualObjects([result stringValueWithRadix:16], @"2", @"GCD test 95 failed");
 }
 
@@ -11865,7 +11865,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"4474363312762370567113113" andRadix:8];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"6210311174644524133550166157702417543454550704135706104470766316244" andRadix:8];
     JKBigInteger *result = [int1 gcd:int2];
-	
+    
     STAssertEqualObjects([result stringValueWithRadix:8], @"1", @"GCD test 96 failed");
 }
 
@@ -11873,7 +11873,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"1011010101111000001000011111000010001101110101100100001001101010011111010010011110" andRadix:2];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"100010111000101000110000000000001111000110010001111110111101000011011011100000111011111000110111101101010011000111111100110010011" andRadix:2];
     JKBigInteger *result = [int1 gcd:int2];
-	
+    
     STAssertEqualObjects([result stringValueWithRadix:2], @"1", @"GCD test 97 failed");
 }
 
@@ -11881,7 +11881,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"1254470883676390818684282" andRadix:10];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"58152259974" andRadix:10];
     JKBigInteger *result = [int1 gcd:int2];
-	
+    
     STAssertEqualObjects([result stringValueWithRadix:10], @"6", @"GCD test 98 failed");
 }
 
@@ -11889,7 +11889,7 @@
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"1000000011100000001110011100010101100011100000011111100101110100100010100000111111000001000110111" andRadix:2];
     JKBigInteger *int2 = [[JKBigInteger alloc] initWithString:@"1000111111010101000000010110010100111010101011101110011100100010111010111" andRadix:2];
     JKBigInteger *result = [int1 gcd:int2];
-	
+    
     STAssertEqualObjects([result stringValueWithRadix:2], @"1", @"GCD test 99 failed");
 }
 

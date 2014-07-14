@@ -95,7 +95,7 @@
 		1885AB77178EF25000249C30 /* JKBigInteger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JKBigInteger.m; path = JKBigInteger/JKBigInteger.m; sourceTree = "<group>"; };
 		1885AB7A178EF27300249C30 /* tommath_class.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tommath_class.h; path = LibTomMath/tommath_class.h; sourceTree = "<group>"; };
 		1885AB7B178EF27300249C30 /* tommath_superclass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tommath_superclass.h; path = LibTomMath/tommath_superclass.h; sourceTree = "<group>"; };
-		1885AB7C178EF27300249C30 /* tommath.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = tommath.c; path = LibTomMath/tommath.c; sourceTree = "<group>"; };
+		1885AB7C178EF27300249C30 /* tommath.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = tommath.c; path = LibTomMath/tommath.c; sourceTree = "<group>"; usesTabs = 0; };
 		1885AB7D178EF27300249C30 /* tommath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tommath.h; path = LibTomMath/tommath.h; sourceTree = "<group>"; };
 		1885AB82178EFB7800249C30 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1885AB83178EFBDB00249C30 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -230,6 +230,7 @@
 				1885AB52178DC63100249C30 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		1885AB52178DC63100249C30 /* Products */ = {
 			isa = PBXGroup;
