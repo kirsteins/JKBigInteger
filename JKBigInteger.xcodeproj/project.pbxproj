@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1812E86919728816007B55DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1885AB54178DC63100249C30 /* Foundation.framework */; };
+		1812E86B19728816007B55DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1812E86A19728816007B55DB /* CoreGraphics.framework */; };
+		1812E86D19728816007B55DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1812E86C19728816007B55DB /* UIKit.framework */; };
+		1812E87319728816007B55DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1812E87119728816007B55DB /* InfoPlist.strings */; };
+		1812E87519728816007B55DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1812E87419728816007B55DB /* main.m */; };
+		1812E87919728816007B55DB /* JKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1812E87819728816007B55DB /* JKAppDelegate.m */; };
+		1812E87C19728816007B55DB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1812E87A19728816007B55DB /* Main_iPhone.storyboard */; };
+		1812E87F19728816007B55DB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1812E87D19728816007B55DB /* Main_iPad.storyboard */; };
+		1812E88219728816007B55DB /* JKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1812E88119728816007B55DB /* JKViewController.m */; };
+		1812E88419728816007B55DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1812E88319728816007B55DB /* Images.xcassets */; };
+		1812E88B19728817007B55DB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1812E88A19728817007B55DB /* XCTest.framework */; };
+		1812E88C19728817007B55DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1885AB54178DC63100249C30 /* Foundation.framework */; };
+		1812E88D19728817007B55DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1812E86C19728816007B55DB /* UIKit.framework */; };
+		1812E89519728817007B55DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1812E89319728817007B55DB /* InfoPlist.strings */; };
+		1812E89719728817007B55DB /* JKBigInteger_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1812E89619728817007B55DB /* JKBigInteger_iOSTests.m */; };
+		1812E89E19728826007B55DB /* JKBigInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885AB77178EF25000249C30 /* JKBigInteger.m */; };
+		1812E89F19728827007B55DB /* JKBigInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885AB77178EF25000249C30 /* JKBigInteger.m */; };
+		1812E8A01972882C007B55DB /* tommath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1885AB7C178EF27300249C30 /* tommath.c */; };
+		1812E8A11972882C007B55DB /* tommath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1885AB7C178EF27300249C30 /* tommath.c */; };
 		187E886E17959223007E4A8E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 187E886C17959223007E4A8E /* InfoPlist.strings */; };
 		187E887117959223007E4A8E /* Unit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E887017959223007E4A8E /* Unit_Tests.m */; };
 		187E887E1795ACA9007E4A8E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187E887617959259007E4A8E /* SenTestingKit.framework */; };
@@ -18,6 +37,16 @@
 		1885AB80178EF27300249C30 /* tommath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1885AB7C178EF27300249C30 /* tommath.c */; };
 		18DE342F17970327001A798E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885AB72178EF21500249C30 /* main.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1812E88E19728817007B55DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1885AB49178DC63100249C30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1812E86719728816007B55DB;
+			remoteInfo = "JKBigInteger iOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1885AB4F178DC63100249C30 /* CopyFiles */ = {
@@ -32,6 +61,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1812E86819728816007B55DB /* JKBigInteger iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JKBigInteger iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1812E86A19728816007B55DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1812E86C19728816007B55DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		1812E87019728816007B55DB /* JKBigInteger iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JKBigInteger iOS-Info.plist"; sourceTree = "<group>"; };
+		1812E87219728816007B55DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1812E87419728816007B55DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1812E87619728816007B55DB /* JKBigInteger iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JKBigInteger iOS-Prefix.pch"; sourceTree = "<group>"; };
+		1812E87719728816007B55DB /* JKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKAppDelegate.h; sourceTree = "<group>"; };
+		1812E87819728816007B55DB /* JKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKAppDelegate.m; sourceTree = "<group>"; };
+		1812E87B19728816007B55DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		1812E87E19728816007B55DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		1812E88019728816007B55DB /* JKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKViewController.h; sourceTree = "<group>"; };
+		1812E88119728816007B55DB /* JKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKViewController.m; sourceTree = "<group>"; };
+		1812E88319728816007B55DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1812E88919728816007B55DB /* JKBigInteger iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JKBigInteger iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1812E88A19728817007B55DB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1812E89219728817007B55DB /* JKBigInteger iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JKBigInteger iOSTests-Info.plist"; sourceTree = "<group>"; };
+		1812E89419728817007B55DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1812E89619728817007B55DB /* JKBigInteger_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKBigInteger_iOSTests.m; sourceTree = "<group>"; };
 		187E886017959223007E4A8E /* Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		187E886B17959223007E4A8E /* Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unit Tests-Info.plist"; sourceTree = "<group>"; };
 		187E886D17959223007E4A8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -55,6 +103,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1812E86519728816007B55DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1812E86B19728816007B55DB /* CoreGraphics.framework in Frameworks */,
+				1812E86D19728816007B55DB /* UIKit.framework in Frameworks */,
+				1812E86919728816007B55DB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1812E88619728816007B55DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1812E88B19728817007B55DB /* XCTest.framework in Frameworks */,
+				1812E88D19728817007B55DB /* UIKit.framework in Frameworks */,
+				1812E88C19728817007B55DB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		187E885C17959223007E4A8E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -75,6 +143,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1812E86E19728816007B55DB /* JKBigInteger iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1812E87719728816007B55DB /* JKAppDelegate.h */,
+				1812E87819728816007B55DB /* JKAppDelegate.m */,
+				1812E87A19728816007B55DB /* Main_iPhone.storyboard */,
+				1812E87D19728816007B55DB /* Main_iPad.storyboard */,
+				1812E88019728816007B55DB /* JKViewController.h */,
+				1812E88119728816007B55DB /* JKViewController.m */,
+				1812E88319728816007B55DB /* Images.xcassets */,
+				1812E86F19728816007B55DB /* Supporting Files */,
+			);
+			path = "JKBigInteger iOS";
+			sourceTree = "<group>";
+		};
+		1812E86F19728816007B55DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1812E87019728816007B55DB /* JKBigInteger iOS-Info.plist */,
+				1812E87119728816007B55DB /* InfoPlist.strings */,
+				1812E87419728816007B55DB /* main.m */,
+				1812E87619728816007B55DB /* JKBigInteger iOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1812E89019728817007B55DB /* JKBigInteger iOS Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1812E89619728817007B55DB /* JKBigInteger_iOSTests.m */,
+				1812E89119728817007B55DB /* Supporting Files */,
+			);
+			name = "JKBigInteger iOS Tests";
+			path = "JKBigInteger iOSTests";
+			sourceTree = "<group>";
+		};
+		1812E89119728817007B55DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1812E89219728817007B55DB /* JKBigInteger iOSTests-Info.plist */,
+				1812E89319728817007B55DB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		187E886517959223007E4A8E /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +224,8 @@
 				1885AB62178DC68200249C30 /* JKBigInteger */,
 				1885AB56178DC63100249C30 /* Example */,
 				187E886917959223007E4A8E /* Unit Tests */,
+				1812E86E19728816007B55DB /* JKBigInteger iOS */,
+				1812E89019728817007B55DB /* JKBigInteger iOS Tests */,
 				1885AB53178DC63100249C30 /* Frameworks */,
 				1885AB52178DC63100249C30 /* Products */,
 			);
@@ -121,6 +236,8 @@
 			children = (
 				1885AB51178DC63100249C30 /* JKBigInteger */,
 				187E886017959223007E4A8E /* Unit Tests.octest */,
+				1812E86819728816007B55DB /* JKBigInteger iOS.app */,
+				1812E88919728816007B55DB /* JKBigInteger iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +247,9 @@
 			children = (
 				187E887617959259007E4A8E /* SenTestingKit.framework */,
 				1885AB54178DC63100249C30 /* Foundation.framework */,
+				1812E86A19728816007B55DB /* CoreGraphics.framework */,
+				1812E86C19728816007B55DB /* UIKit.framework */,
+				1812E88A19728817007B55DB /* XCTest.framework */,
 				187E886517959223007E4A8E /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -178,6 +298,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1812E86719728816007B55DB /* JKBigInteger iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1812E89819728817007B55DB /* Build configuration list for PBXNativeTarget "JKBigInteger iOS" */;
+			buildPhases = (
+				1812E86419728816007B55DB /* Sources */,
+				1812E86519728816007B55DB /* Frameworks */,
+				1812E86619728816007B55DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JKBigInteger iOS";
+			productName = "JKBigInteger iOS";
+			productReference = 1812E86819728816007B55DB /* JKBigInteger iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1812E88819728816007B55DB /* JKBigInteger iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1812E89B19728817007B55DB /* Build configuration list for PBXNativeTarget "JKBigInteger iOSTests" */;
+			buildPhases = (
+				1812E88519728816007B55DB /* Sources */,
+				1812E88619728816007B55DB /* Frameworks */,
+				1812E88719728816007B55DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1812E88F19728817007B55DB /* PBXTargetDependency */,
+			);
+			name = "JKBigInteger iOSTests";
+			productName = "JKBigInteger iOSTests";
+			productReference = 1812E88919728816007B55DB /* JKBigInteger iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		187E885F17959223007E4A8E /* Unit Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 187E887517959223007E4A8E /* Build configuration list for PBXNativeTarget "Unit Tests" */;
@@ -222,6 +377,11 @@
 				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Jānis Kiršteins";
+				TargetAttributes = {
+					1812E88819728816007B55DB = {
+						TestTargetID = 1812E86719728816007B55DB;
+					};
+				};
 			};
 			buildConfigurationList = 1885AB4C178DC63100249C30 /* Build configuration list for PBXProject "JKBigInteger" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -229,6 +389,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 1885AB48178DC63100249C30;
 			productRefGroup = 1885AB52178DC63100249C30 /* Products */;
@@ -237,11 +398,32 @@
 			targets = (
 				1885AB50178DC63100249C30 /* JKBigInteger */,
 				187E885F17959223007E4A8E /* Unit Tests */,
+				1812E86719728816007B55DB /* JKBigInteger iOS */,
+				1812E88819728816007B55DB /* JKBigInteger iOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1812E86619728816007B55DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1812E87F19728816007B55DB /* Main_iPad.storyboard in Resources */,
+				1812E88419728816007B55DB /* Images.xcassets in Resources */,
+				1812E87C19728816007B55DB /* Main_iPhone.storyboard in Resources */,
+				1812E87319728816007B55DB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1812E88719728816007B55DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1812E89519728817007B55DB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		187E885D17959223007E4A8E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -269,6 +451,28 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1812E86419728816007B55DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1812E8A01972882C007B55DB /* tommath.c in Sources */,
+				1812E87519728816007B55DB /* main.m in Sources */,
+				1812E88219728816007B55DB /* JKViewController.m in Sources */,
+				1812E89E19728826007B55DB /* JKBigInteger.m in Sources */,
+				1812E87919728816007B55DB /* JKAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1812E88519728816007B55DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1812E89F19728827007B55DB /* JKBigInteger.m in Sources */,
+				1812E89719728817007B55DB /* JKBigInteger_iOSTests.m in Sources */,
+				1812E8A11972882C007B55DB /* tommath.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		187E885B17959223007E4A8E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,7 +495,47 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1812E88F19728817007B55DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1812E86719728816007B55DB /* JKBigInteger iOS */;
+			targetProxy = 1812E88E19728817007B55DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		1812E87119728816007B55DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1812E87219728816007B55DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1812E87A19728816007B55DB /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1812E87B19728816007B55DB /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		1812E87D19728816007B55DB /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1812E87E19728816007B55DB /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		1812E89319728817007B55DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1812E89419728817007B55DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		187E886C17959223007E4A8E /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -303,6 +547,132 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1812E89919728817007B55DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JKBigInteger iOS/JKBigInteger iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "JKBigInteger iOS/JKBigInteger iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1812E89A19728817007B55DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JKBigInteger iOS/JKBigInteger iOS-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "JKBigInteger iOS/JKBigInteger iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1812E89C19728817007B55DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JKBigInteger iOS.app/JKBigInteger iOS";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JKBigInteger iOS/JKBigInteger iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "JKBigInteger iOSTests/JKBigInteger iOSTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1812E89D19728817007B55DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JKBigInteger iOS.app/JKBigInteger iOS";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JKBigInteger iOS/JKBigInteger iOS-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "JKBigInteger iOSTests/JKBigInteger iOSTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		187E887317959223007E4A8E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -415,6 +785,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1812E89819728817007B55DB /* Build configuration list for PBXNativeTarget "JKBigInteger iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1812E89919728817007B55DB /* Debug */,
+				1812E89A19728817007B55DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1812E89B19728817007B55DB /* Build configuration list for PBXNativeTarget "JKBigInteger iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1812E89C19728817007B55DB /* Debug */,
+				1812E89D19728817007B55DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		187E887517959223007E4A8E /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

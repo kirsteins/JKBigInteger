@@ -1349,7 +1349,7 @@ int mp_init_size (mp_int * a, int size)
  */
 int mp_prime_next_prime(mp_int *a, int t, int bbs_style)
 {
-   int      err, res, x, y;
+   int      err, res = 0, x, y;
    mp_digit res_tab[PRIME_SIZE], step, kstep;
    mp_int   b;
 
@@ -4871,7 +4871,7 @@ mp_montgomery_setup (mp_int * n, mp_digit * rho)
 int mp_fwrite(mp_int *a, int radix, FILE *stream)
 {
    char *buf = NULL;
-   int err, len, x;
+   int err = 0, len = 0, x = 0;
    
    if ((err = mp_radix_size(a, radix, &len)) != MP_OKAY) {
       return err;
