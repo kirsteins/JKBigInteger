@@ -24,6 +24,16 @@ JKBigInteger *int5 = [[JKBigInteger alloc] initWithString:@"10000001234567890123
 JKBigInteger *int6 = [[JKBigInteger alloc] initWithString:@"123"];
 
 NSLog(@"%@ / %@ = %@", int5, int6, [int5 divide:int6]);
+
+unsigned int numBytesInt5 = [int5 countBytes];
+unsigned char bytes[numBytesInt5];
+        
+[int5 toByteArrayUnsigned:bytes];
+        
+for(unsigned i = 0; i < numBytesInt5; i++)
+{
+     NSLog(@"Byte %d: %X", i, bytes[i]);
+}
 ```
 
 ## Credits

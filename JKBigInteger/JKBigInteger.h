@@ -49,4 +49,8 @@
 
 - (NSString *)description;
 
+- (unsigned int)countBytes;
+- (void)toByteArraySigned: (unsigned char*) byteArray;
+- (void)toByteArrayUnsigned: (unsigned char*) byteArray;
+
 @end
