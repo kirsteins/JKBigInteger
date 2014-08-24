@@ -376,4 +376,19 @@
     mp_clear(&m_value);
 }
 
+/* Returns the number of bytes required to store this JKBigInteger as binary */
+- (unsigned int)countBytes {
+    return (unsigned int) mp_unsigned_bin_size(&m_value);
+}
+
+/* Retrieves the signed [big endian] format of this JKBigInteger */
+- (void)toByteArraySigned: (unsigned char*) byteArray {
+    mp_to_signed_bin(&m_value, byteArray);
+}
+
+/* Retrieves the unsigned [big endian] format of this JKBigInteger */
+- (void)toByteArrayUnsigned: (unsigned char*) byteArray {
+    mp_to_unsigned_bin(&m_value, byteArray);
+}
+
 @end
