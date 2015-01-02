@@ -36,6 +36,16 @@ for(unsigned i = 0; i < numBytesInt5; i++)
 }
 ```
 
+## Installation
+
+You can easily add `JKBigInteger` to your project with [CocoaPods](http://cocoapods.org) by adding it to your `Podfile`:
+
+```
+pod 'JKBigInteger', '~> 0.0.1'
+```
+
+Read the ['Pod' Syntax Reference](http://guides.cocoapods.org/syntax/podfile.html) for more details.
+
 ## Credits
 
 JKBigInteger was created by Jānis Kiršteins
