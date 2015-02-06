@@ -1,6 +1,7 @@
 Pod::Spec.new do |s|
   s.name    = "JKBigInteger"
   s.version = "0.0.1"
+  s.requires_arc = true
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.homepage = "https://github.com/kirsteins/JKBigInteger"
   s.author = "Jānis Kiršteins"
