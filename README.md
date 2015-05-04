@@ -34,6 +34,17 @@ for(unsigned i = 0; i < numBytesInt5; i++)
 {
      NSLog(@"Byte %d: %X", i, bytes[i]);
 }
+
+JKBigDecimal *dec1 = [[JKBigDecimal alloc] initWithString:@"2015.987"];
+JKBigDecimal *dec2 = [[JKBigDecimal alloc] initWithString:@"5.4"];
+NSLog(@"%@ + %@ = %@", dec1, dec2, [dec1 add:dec2]);
+NSLog(@"%@ - %@ = %@", dec1, dec2, [dec1 subtract:dec2]);
+NSLog(@"%@ * %@ = %@", dec1, dec2, [dec1 multiply:dec2]);
+NSLog(@"%@ / %@ = %@", dec1, dec2, [dec1 divide:dec2]);
+NSLog(@"%@ %% %@ = %@", dec1, dec2, [dec1 remainder:dec2]);
+
+JKBigDecimal *dec3 = [[JKBigDecimal alloc] initWithString:@"0.99"];
+NSLog(@"%@ pow 365 = %@", dec3, [dec3 pow:365]);
 ```
 
 ## Installation
@@ -49,6 +60,7 @@ Read the ['Pod' Syntax Reference](http://guides.cocoapods.org/syntax/podfile.htm
 ## Credits
 
 JKBigInteger was created by Jānis Kiršteins
+JKBigDecimal was created by Midfar Sun
 
 ## License
 
