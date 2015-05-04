@@ -59,8 +59,8 @@ Read the ['Pod' Syntax Reference](http://guides.cocoapods.org/syntax/podfile.htm
 
 ## Credits
 
-JKBigInteger was created by Jānis Kiršteins
-JKBigDecimal was created by Midfar Sun
+JKBigInteger was created by Jānis Kiršteins. 
+JKBigDecimal was created by Midfar Sun.
 
 ## License
 
