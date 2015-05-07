@@ -36,6 +36,7 @@
 		1885AB79178EF25000249C30 /* JKBigInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885AB77178EF25000249C30 /* JKBigInteger.m */; };
 		1885AB80178EF27300249C30 /* tommath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1885AB7C178EF27300249C30 /* tommath.c */; };
 		18DE342F17970327001A798E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885AB72178EF21500249C30 /* main.m */; };
+		A1DAE6961AF7028B00BCA70D /* JKBigDecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DAE6951AF7028B00BCA70D /* JKBigDecimal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		1885AB82178EFB7800249C30 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1885AB83178EFBDB00249C30 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1885AB84178EFBF100249C30 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A1DAE6941AF7028B00BCA70D /* JKBigDecimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JKBigDecimal.h; path = JKBigInteger/JKBigDecimal.h; sourceTree = "<group>"; };
+		A1DAE6951AF7028B00BCA70D /* JKBigDecimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JKBigDecimal.m; path = JKBigInteger/JKBigDecimal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +282,8 @@
 			children = (
 				1885AB76178EF25000249C30 /* JKBigInteger.h */,
 				1885AB77178EF25000249C30 /* JKBigInteger.m */,
+				A1DAE6941AF7028B00BCA70D /* JKBigDecimal.h */,
+				A1DAE6951AF7028B00BCA70D /* JKBigDecimal.m */,
 				1885AB63178DC69200249C30 /* LibTomMath */,
 			);
 			name = JKBigInteger;
@@ -350,7 +355,7 @@
 			name = "Unit Tests";
 			productName = "Unit Tests";
 			productReference = 187E886017959223007E4A8E /* Unit Tests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		1885AB50178DC63100249C30 /* JKBigInteger */ = {
 			isa = PBXNativeTarget;
@@ -491,6 +496,7 @@
 				1885AB80178EF27300249C30 /* tommath.c in Sources */,
 				1885AB79178EF25000249C30 /* JKBigInteger.m in Sources */,
 				18DE342F17970327001A798E /* main.m in Sources */,
+				A1DAE6961AF7028B00BCA70D /* JKBigDecimal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,6 +799,7 @@
 				1812E89A19728817007B55DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1812E89B19728817007B55DB /* Build configuration list for PBXNativeTarget "JKBigInteger iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -801,6 +808,7 @@
 				1812E89D19728817007B55DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		187E887517959223007E4A8E /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
 			isa = XCConfigurationList;
