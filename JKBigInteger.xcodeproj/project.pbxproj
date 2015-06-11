@@ -28,7 +28,6 @@
 		1812E8A11972882C007B55DB /* tommath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1885AB7C178EF27300249C30 /* tommath.c */; };
 		187E886E17959223007E4A8E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 187E886C17959223007E4A8E /* InfoPlist.strings */; };
 		187E887117959223007E4A8E /* Unit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E887017959223007E4A8E /* Unit_Tests.m */; };
-		187E887E1795ACA9007E4A8E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187E887617959259007E4A8E /* SenTestingKit.framework */; };
 		187E88811795AE18007E4A8E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1885AB54178DC63100249C30 /* Foundation.framework */; };
 		187E88821795AF90007E4A8E /* JKBigInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885AB77178EF25000249C30 /* JKBigInteger.m */; };
 		187E88831795AFB4007E4A8E /* tommath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1885AB7C178EF27300249C30 /* tommath.c */; };
@@ -81,13 +80,12 @@
 		1812E89219728817007B55DB /* JKBigInteger iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JKBigInteger iOSTests-Info.plist"; sourceTree = "<group>"; };
 		1812E89419728817007B55DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1812E89619728817007B55DB /* JKBigInteger_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKBigInteger_iOSTests.m; sourceTree = "<group>"; };
-		187E886017959223007E4A8E /* Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		187E886017959223007E4A8E /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		187E886B17959223007E4A8E /* Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unit Tests-Info.plist"; sourceTree = "<group>"; };
 		187E886D17959223007E4A8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		187E886F17959223007E4A8E /* Unit_Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Unit_Tests.h; sourceTree = "<group>"; };
 		187E887017959223007E4A8E /* Unit_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Unit_Tests.m; sourceTree = "<group>"; };
 		187E887217959223007E4A8E /* Unit Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Unit Tests-Prefix.pch"; sourceTree = "<group>"; };
-		187E887617959259007E4A8E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		1881B5C1181EFF6D00CAE2BA /* JKBigInteger-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JKBigInteger-Prefix.pch"; path = "Example/JKBigInteger-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		1885AB51178DC63100249C30 /* JKBigInteger */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JKBigInteger; sourceTree = BUILT_PRODUCTS_DIR; };
 		1885AB54178DC63100249C30 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,7 +128,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				187E887E1795ACA9007E4A8E /* SenTestingKit.framework in Frameworks */,
 				187E88811795AE18007E4A8E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,7 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				1885AB51178DC63100249C30 /* JKBigInteger */,
-				187E886017959223007E4A8E /* Unit Tests.octest */,
+				187E886017959223007E4A8E /* Unit Tests.xctest */,
 				1812E86819728816007B55DB /* JKBigInteger iOS.app */,
 				1812E88919728816007B55DB /* JKBigInteger iOSTests.xctest */,
 			);
@@ -249,7 +246,6 @@
 		1885AB53178DC63100249C30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				187E887617959259007E4A8E /* SenTestingKit.framework */,
 				1885AB54178DC63100249C30 /* Foundation.framework */,
 				1812E86A19728816007B55DB /* CoreGraphics.framework */,
 				1812E86C19728816007B55DB /* UIKit.framework */,
@@ -354,8 +350,8 @@
 			);
 			name = "Unit Tests";
 			productName = "Unit Tests";
-			productReference = 187E886017959223007E4A8E /* Unit Tests.octest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
+			productReference = 187E886017959223007E4A8E /* Unit Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		1885AB50178DC63100249C30 /* JKBigInteger */ = {
 			isa = PBXNativeTarget;
@@ -683,26 +679,32 @@
 		187E887317959223007E4A8E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Unit Tests/Unit Tests-Prefix.pch";
 				INFOPLIST_FILE = "Unit Tests/Unit Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
 		187E887417959223007E4A8E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Unit Tests/Unit Tests-Prefix.pch";
 				INFOPLIST_FILE = "Unit Tests/Unit Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
