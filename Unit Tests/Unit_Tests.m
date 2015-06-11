@@ -5888,6 +5888,1133 @@
 
 //////////
 
+- (void)testPowMod0 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"26" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"73" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"10858" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"4748", @"PowMod test 0 failed");
+}
+
+- (void)testPowMod1 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-79268" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"611" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"80" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"48", @"PowMod test 1 failed");
+}
+
+- (void)testPowMod2 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"46600826" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"0" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"8487413" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"1", @"PowMod test 2 failed");
+}
+
+- (void)testPowMod3 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"1465748" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"364434193" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"5" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"3", @"PowMod test 3 failed");
+}
+
+- (void)testPowMod4 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"873883" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"48223971" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"348" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"127", @"PowMod test 4 failed");
+}
+
+- (void)testPowMod5 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-52" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"183" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"125544" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"49784", @"PowMod test 5 failed");
+}
+
+- (void)testPowMod6 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-846" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"394" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"969114928" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"877192256", @"PowMod test 6 failed");
+}
+
+- (void)testPowMod7 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"7054382" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"917" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"9" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"5", @"PowMod test 7 failed");
+}
+
+- (void)testPowMod8 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"3768" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"797" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"42" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"18", @"PowMod test 8 failed");
+}
+
+- (void)testPowMod9 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"357352724" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"2093262" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"84225" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"72601", @"PowMod test 9 failed");
+}
+
+- (void)testPowMod10 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"109912993" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"364" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"8323" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"5279", @"PowMod test 10 failed");
+}
+
+- (void)testPowMod11 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-3224" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"270672" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"198893010" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"47016406", @"PowMod test 11 failed");
+}
+
+- (void)testPowMod12 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"55" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"95723840" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"523703559" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"372050017", @"PowMod test 12 failed");
+}
+
+- (void)testPowMod13 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"791480518" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"904571" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"581451304" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"444873224", @"PowMod test 13 failed");
+}
+
+- (void)testPowMod14 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"7278" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"922" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"2398" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"2040", @"PowMod test 14 failed");
+}
+
+- (void)testPowMod15 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-5" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"925972" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"33496" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"15809", @"PowMod test 15 failed");
+}
+
+- (void)testPowMod16 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"0" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"649246" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"262" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"0", @"PowMod test 16 failed");
+}
+
+- (void)testPowMod17 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"52004" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"997" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"2" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"0", @"PowMod test 17 failed");
+}
+
+- (void)testPowMod18 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-4115715" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"8" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"234398" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"3299", @"PowMod test 18 failed");
+}
+
+- (void)testPowMod19 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-13612" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"2576" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"57" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"7", @"PowMod test 19 failed");
+}
+
+- (void)testPowMod20 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"9843599271" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"9688373" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"8509" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"5780", @"PowMod test 20 failed");
+}
+
+- (void)testPowMod21 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"3415850521" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"762" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"3050240" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"760241", @"PowMod test 21 failed");
+}
+
+- (void)testPowMod22 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"38873" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"18109" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"6791035" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"4721568", @"PowMod test 22 failed");
+}
+
+- (void)testPowMod23 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"504242" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"66851907" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"859955181" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"352955933", @"PowMod test 23 failed");
+}
+
+- (void)testPowMod24 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"67731070" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"2628566175" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"7885095" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"6298660", @"PowMod test 24 failed");
+}
+
+- (void)testPowMod25 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"575051" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"8" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"72796410" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"35016721", @"PowMod test 25 failed");
+}
+
+- (void)testPowMod26 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"3" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"0" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"6595628337" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"1", @"PowMod test 26 failed");
+}
+
+- (void)testPowMod27 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"80479332" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"13" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"9" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"0", @"PowMod test 27 failed");
+}
+
+- (void)testPowMod28 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"35578433693" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"9608165878" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"32791508266" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"32575013339", @"PowMod test 28 failed");
+}
+
+- (void)testPowMod29 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"9998073" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"96042198253" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"2871019117" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"94477702", @"PowMod test 29 failed");
+}
+
+- (void)testPowMod30 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"8502" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"88462049796" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"288668" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"234260", @"PowMod test 30 failed");
+}
+
+- (void)testPowMod31 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"966350153" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"6125446381" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"940" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"33", @"PowMod test 31 failed");
+}
+
+- (void)testPowMod32 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"51249" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"46773" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"83983261446" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"2570243355", @"PowMod test 32 failed");
+}
+
+- (void)testPowMod33 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"2571204" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"205" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"4404831987" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"2226688593", @"PowMod test 33 failed");
+}
+
+- (void)testPowMod34 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"19" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"439650" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"888059767" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"247638574", @"PowMod test 34 failed");
+}
+
+- (void)testPowMod35 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"9485028101" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"55407" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"3066739" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"2994746", @"PowMod test 35 failed");
+}
+
+- (void)testPowMod36 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"868043" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"56705619" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"183207" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"162593", @"PowMod test 36 failed");
+}
+
+- (void)testPowMod37 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"7072012" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"750002" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"2399910888" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"1322891440", @"PowMod test 37 failed");
+}
+
+- (void)testPowMod38 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"55779049" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"27843295" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"96" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"25", @"PowMod test 38 failed");
+}
+
+- (void)testPowMod39 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"57835434" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"31279309" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"90443" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"13168", @"PowMod test 39 failed");
+}
+
+- (void)testPowMod40 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-6511" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"7486344275" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"346901687" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"325667244", @"PowMod test 40 failed");
+}
+
+- (void)testPowMod41 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"635099" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"3669199" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"81611251" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"59252827", @"PowMod test 41 failed");
+}
+
+- (void)testPowMod42 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"8010935551" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"34" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"9927" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"1405", @"PowMod test 42 failed");
+}
+
+- (void)testPowMod43 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"24885132" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"4526383" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"58404" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"15444", @"PowMod test 43 failed");
+}
+
+- (void)testPowMod44 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"613003" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"6878758" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"49607641" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"43381288", @"PowMod test 44 failed");
+}
+
+- (void)testPowMod45 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"132639004426" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"81043" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"587317316867" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"532884551555", @"PowMod test 45 failed");
+}
+
+- (void)testPowMod46 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"4439384" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"43262747" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"10119" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"7922", @"PowMod test 46 failed");
+}
+
+- (void)testPowMod47 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"689907710540" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"460484866" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"82087637" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"30398950", @"PowMod test 47 failed");
+}
+
+- (void)testPowMod48 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"84094" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"867130" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"62309" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"9025", @"PowMod test 48 failed");
+}
+
+- (void)testPowMod49 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-33557432" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"60878" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"580294942" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"194480658", @"PowMod test 49 failed");
+}
+
+- (void)testPowMod50 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"3869257" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"4125450573" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"456883055" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"129529247", @"PowMod test 50 failed");
+}
+
+- (void)testPowMod51 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"9878539157" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"15920872437" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"4738245" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"2745542", @"PowMod test 51 failed");
+}
+
+- (void)testPowMod52 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"8582013178" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"46758" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"28059" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"26806", @"PowMod test 52 failed");
+}
+
+- (void)testPowMod53 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"48259672" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"37258629489" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"7377276929" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"1692584431", @"PowMod test 53 failed");
+}
+
+- (void)testPowMod54 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"920350" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"289730727" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"1122526" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"471310", @"PowMod test 54 failed");
+}
+
+- (void)testPowMod55 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-352466" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"9169937470" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"70675259176" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"18255076720", @"PowMod test 55 failed");
+}
+
+- (void)testPowMod56 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"612474" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"308813590252" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"510155" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"383521", @"PowMod test 56 failed");
+}
+
+- (void)testPowMod57 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"180356946205" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"710633896291" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"575721" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"242878", @"PowMod test 57 failed");
+}
+
+- (void)testPowMod58 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"83046" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"3518" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"9768613" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"8644737", @"PowMod test 58 failed");
+}
+
+- (void)testPowMod59 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"8670878985584" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"7549509958953" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"968064799634" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"673069231488", @"PowMod test 59 failed");
+}
+
+- (void)testPowMod60 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-37831593555" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"141781" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"3434657" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"2539127", @"PowMod test 60 failed");
+}
+
+- (void)testPowMod61 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"94250019226" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"452692809515" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"99738576" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"82526128", @"PowMod test 61 failed");
+}
+
+- (void)testPowMod62 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-1746555354919" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"310727" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"6925934085655" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"2276231760446", @"PowMod test 62 failed");
+}
+
+- (void)testPowMod63 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"777851791" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"126226427233" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"84192406004" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"11526643943", @"PowMod test 63 failed");
+}
+
+- (void)testPowMod64 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"3511" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"42864" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"89474" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"53201", @"PowMod test 64 failed");
+}
+
+- (void)testPowMod65 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"611596753206" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"17005495050" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"3708625387380" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"2318918831736", @"PowMod test 65 failed");
+}
+
+- (void)testPowMod66 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"482182433948" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"97822330605" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"90338471939" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"27830209373", @"PowMod test 66 failed");
+}
+
+- (void)testPowMod67 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"8971927" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"5117957930887" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"1928567236065" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"1437815380378", @"PowMod test 67 failed");
+}
+
+- (void)testPowMod68 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"67445777442" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"3930771" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"4541604" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"773076", @"PowMod test 68 failed");
+}
+
+- (void)testPowMod69 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-52133" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"16783" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"3337" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"541", @"PowMod test 69 failed");
+}
+
+- (void)testPowMod70 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"22" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"7787554274" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"823549" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"503210", @"PowMod test 70 failed");
+}
+
+- (void)testPowMod71 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"46816685133" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"272923" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"22855404855" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"4704305202", @"PowMod test 71 failed");
+}
+
+- (void)testPowMod72 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"181225207536" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"22085689725" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"67955765111" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"5581219593", @"PowMod test 72 failed");
+}
+
+- (void)testPowMod73 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"207971493064" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"41707850" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"9115746425" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"6454330776", @"PowMod test 73 failed");
+}
+
+- (void)testPowMod74 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"42840650" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"206759347" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"852090956" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"15995168", @"PowMod test 74 failed");
+}
+
+- (void)testPowMod75 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"27703329637330" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"20686092" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"8407250" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"6767250", @"PowMod test 75 failed");
+}
+
+- (void)testPowMod76 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-4953" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"669615" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"741766623319" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"660186892888", @"PowMod test 76 failed");
+}
+
+- (void)testPowMod77 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"11957529241" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"380932179443" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"973373783" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"970856001", @"PowMod test 77 failed");
+}
+
+- (void)testPowMod78 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"78726001052485" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"62593863" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"24053" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"22766", @"PowMod test 78 failed");
+}
+
+- (void)testPowMod79 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"340516095" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"798875" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"2556443616" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"348235359", @"PowMod test 79 failed");
+}
+
+- (void)testPowMod80 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"954899979887" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"472716" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"979176" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"21817", @"PowMod test 80 failed");
+}
+
+- (void)testPowMod81 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"1669727071" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"1008664017563" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"37837" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"17717", @"PowMod test 81 failed");
+}
+
+- (void)testPowMod82 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"592681" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"30974401363809" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"65653048867352" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"2039369146553", @"PowMod test 82 failed");
+}
+
+- (void)testPowMod83 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-47884" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"525888510" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"60238953788774" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"8466915489354", @"PowMod test 83 failed");
+}
+
+- (void)testPowMod84 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"5643430747" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"31164" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"8629966388917" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"7441630635230", @"PowMod test 84 failed");
+}
+
+- (void)testPowMod85 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-9134817647675" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"7013427758650" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"14493293680" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"10069704265", @"PowMod test 85 failed");
+}
+
+- (void)testPowMod86 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"16875464" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"4824632" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"157384425878173" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"110131510850102", @"PowMod test 86 failed");
+}
+
+- (void)testPowMod87 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"8460275679756" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"1249967640481565" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"3530286614" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"1855000398", @"PowMod test 87 failed");
+}
+
+- (void)testPowMod88 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-21034390" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"9455714874055" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"499517062" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"436407454", @"PowMod test 88 failed");
+}
+
+- (void)testPowMod89 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-67878984199" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"6771837956" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"26518969637" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"25569641018", @"PowMod test 89 failed");
+}
+
+- (void)testPowMod90 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"24845854" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"38512788750888" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"97880493" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"44709115", @"PowMod test 90 failed");
+}
+
+- (void)testPowMod91 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"913222119920236" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"89756684" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"24503538" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"2358514", @"PowMod test 91 failed");
+}
+
+- (void)testPowMod92 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"282825837874763" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"49707087" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"4419250635" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"2888992652", @"PowMod test 92 failed");
+}
+
+- (void)testPowMod93 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"63007338" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"778023537730086" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"51807416" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"42047040", @"PowMod test 93 failed");
+}
+
+- (void)testPowMod94 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"86515727" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"37854772745819" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"932061443536802" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"913958455659941", @"PowMod test 94 failed");
+}
+
+- (void)testPowMod95 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"16752138958" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"84132272429" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"883645897" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"66146743", @"PowMod test 95 failed");
+}
+
+- (void)testPowMod96 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"76020717" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"31715587905196" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"205759754" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"84248649", @"PowMod test 96 failed");
+}
+
+- (void)testPowMod97 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"408229656454238" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"503345091356" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"5122409740" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"1428721156", @"PowMod test 97 failed");
+}
+
+- (void)testPowMod98 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"335638746639" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"5761369582225304" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"4092173299" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"3495108299", @"PowMod test 98 failed");
+}
+
+- (void)testPowMod99 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"4118216" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"163393347759" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"33772615" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"18314396", @"PowMod test 99 failed");
+}
+
+- (void)testPowMod100 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"6140126413594" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"8416471601616" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"48576280861410361" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"26480949886245014", @"PowMod test 100 failed");
+}
+
+- (void)testPowMod101 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-654797902884" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"3118772351656763" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"49622473264915" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"8452790798791", @"PowMod test 101 failed");
+}
+
+- (void)testPowMod102 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"724850698" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"6033802538378749" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"5080656658" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"3131590110", @"PowMod test 102 failed");
+}
+
+- (void)testPowMod103 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-67747240120320" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"5206803331886510" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"16513427532371" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"9305404239198", @"PowMod test 103 failed");
+}
+
+- (void)testPowMod104 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"571096000432" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"140739165" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"2954342334466067" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"1353110426217941", @"PowMod test 104 failed");
+}
+
+- (void)testPowMod105 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-99625731171" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"97620037702645811" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"44537854660922914" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"235109017589213", @"PowMod test 105 failed");
+}
+
+- (void)testPowMod106 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-72021302" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"2716854503311092" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"329338426" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"308255178", @"PowMod test 106 failed");
+}
+
+- (void)testPowMod107 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-12837777900800" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"17117883244" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"11645469" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"4924588", @"PowMod test 107 failed");
+}
+
+- (void)testPowMod108 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"517104019809" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"96545405933271150" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"48276368795" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"10960026506", @"PowMod test 108 failed");
+}
+
+- (void)testPowMod109 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"749819481" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"17040593450696047" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"13586015736" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"2311264233", @"PowMod test 109 failed");
+}
+
+- (void)testPowMod110 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-3050009718172511" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"728537309" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"5801457671812805" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"5155502323398924", @"PowMod test 110 failed");
+}
+
+- (void)testPowMod111 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"583365344369904345" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"274298196969" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"206968876678" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"178154366245", @"PowMod test 111 failed");
+}
+
+- (void)testPowMod112 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-79044395581" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"9116190241482576941" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"239200013057" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"188422584849", @"PowMod test 112 failed");
+}
+
+- (void)testPowMod113 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"557522956445489849" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"32695219802913423753" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"6644227791725857" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"4886117301253388", @"PowMod test 113 failed");
+}
+
+- (void)testPowMod114 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-970081051547602" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"98172198401841564685" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"928763975802" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"22343542292", @"PowMod test 114 failed");
+}
+
+- (void)testPowMod115 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"321415667027595" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"92728916953004350117" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"4993968573660723" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"2876297201989143", @"PowMod test 115 failed");
+}
+
+- (void)testPowMod116 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-8699136317926938091" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"34913749137460" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"747114775995" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"558798686791", @"PowMod test 116 failed");
+}
+
+- (void)testPowMod117 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-750347276056433413" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"65602570699247" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"72710009984856228277" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"105504442183260111", @"PowMod test 117 failed");
+}
+
+- (void)testPowMod118 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"796490992759" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"979812498143888903" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"84011139142607244" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"27172815871253503", @"PowMod test 118 failed");
+}
+
+- (void)testPowMod119 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"11599197279102044" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"36330854506634" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"5869662463842692" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"4784840887360516", @"PowMod test 119 failed");
+}
+
+- (void)testPowMod120 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-34727277565261165051" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"53891223619" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"2799195351079917048" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"2607666110843551325", @"PowMod test 120 failed");
+}
+
+- (void)testPowMod121 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"-2641799394644983" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"25158485319487" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"548355600533885000" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"46465320728116873", @"PowMod test 121 failed");
+}
+
+- (void)testPowMod122 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"767992806236118220" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"58099104472634917573004" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"48648467500194542" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"23718576556107152", @"PowMod test 122 failed");
+}
+
+- (void)testPowMod123 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"783048980600864030214223520282343154949582263988130988029" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"5640798680918146067495300825091961866365823288705" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"712576055151408429943237184396668347415006718010549447" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"132303576760619346367560792334725765196706066347238184", @"PowMod test 123 failed");
+}
+
+- (void)testPowMod124 {
+    JKBigInteger *val = [[JKBigInteger alloc] initWithString:@"54419766013288244584593400647946050509291116271357" andRadix:10];
+    JKBigInteger *exp = [[JKBigInteger alloc] initWithString:@"37442044497849759156397618484039469808263267657304" andRadix:10];
+    JKBigInteger *mod = [[JKBigInteger alloc] initWithString:@"55409955411797081810766022756739065410388681698701498" andRadix:10];
+    JKBigInteger *result = [val pow:exp andMod:mod];
+
+    XCTAssertEqualObjects([result stringValueWithRadix:10], @"625989815794948434601895148375843191288774735399931", @"PowMod test 124 failed");
+}
+
+//////////
+
 - (void)testNegate0 {
     JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"-2750131224152760014475320211" andRadix:8];
     JKBigInteger *result = [int1 negate];
