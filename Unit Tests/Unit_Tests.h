@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Jānis Kiršteins. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface Unit_Tests : SenTestCase
+@interface Unit_Tests : XCTestCase
 
 @end

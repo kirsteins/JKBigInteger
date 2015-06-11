@@ -29,7 +29,7 @@
 - (NSArray *)divideAndRemainder:(JKBigInteger *)bigInteger;
 
 - (id)pow:(unsigned int)exponent;
-
+- (id)pow:(JKBigInteger*)exponent andMod:(JKBigInteger*)modulus;
 - (id)negate;
 - (id)abs;
 

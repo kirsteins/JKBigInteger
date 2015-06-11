@@ -226,6 +226,24 @@
     return newBigInteger;
 }
 
+- (id)pow:(JKBigInteger*)exponent andMod: (JKBigInteger*)modulus {
+
+    int result;
+    mp_int output;
+    mp_init(&output);
+    
+    result = mp_exptmod(&m_value, &exponent->m_value, &modulus->m_value, &output);
+    if (result == MP_VAL) {
+        mp_clear(&output);
+        return nil;
+    }
+    
+    JKBigInteger *newBigInteger = [[JKBigInteger alloc] initWithValue:&output];
+    mp_clear(&output);
+    
+    return newBigInteger;
+}
+
 - (id)negate {
 
     mp_int negate;
