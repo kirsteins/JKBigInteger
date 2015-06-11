@@ -102,6 +102,45 @@
 
     return self;
 }
+
+- (id)initWithUnsignedByteArray:(const unsigned char *)byteArray andSize:(int)size {
+    
+    self = [super init];
+    
+    if (self) {
+        //allocate a buffer large enough to read this value
+        if (MP_OKAY != mp_init_size(&m_value, size))
+            return nil;
+
+        //read the value
+        if (MP_OKAY != mp_read_unsigned_bin(&m_value, byteArray, size)) {
+            mp_clear(&m_value);
+            return nil;
+        }
+    }
+    
+    return self;
+}
+
+- (id)initWithSignedByteArray:(const unsigned char *)byteArray andSize:(int)size {
+
+    self = [super init];
+    
+    if (self) {
+        //allocate a buffer large enough to read this value
+        if (MP_OKAY != mp_init_size(&m_value, size))
+            return nil;
+        
+        //read the value
+        if (MP_OKAY != mp_read_signed_bin(&m_value, byteArray, size)) {
+            mp_clear(&m_value);
+            return nil;
+        }
+    }
+    
+    return self;
+}
+
 - (void)encodeWithCoder:(NSCoder *)encoder {
 
     mp_clamp(&m_value);
@@ -397,6 +436,11 @@
 /* Returns the number of bytes required to store this JKBigInteger as binary */
 - (unsigned int)countBytes {
     return (unsigned int) mp_unsigned_bin_size(&m_value);
+}
+
+/* Returns the number of bytes required to store this JKBigInteger as signed binary */
+- (unsigned int)countSignedBytes {
+    return (unsigned int) mp_signed_bin_size(&m_value);
 }
 
 /* Retrieves the signed [big endian] format of this JKBigInteger */

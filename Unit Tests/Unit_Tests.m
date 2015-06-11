@@ -84,6 +84,39 @@
     XCTAssertEqual(result, NSOrderedSame, @"Test equal 2 failed!");
 }
 
+- (void)testInitWithUnsignedByteArray {
+    JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"939202309485773939498585839393498477393984"];
+    NSMutableData* data = [[NSMutableData alloc] initWithCapacity:[int1 countBytes]];
+    data.length = [int1 countBytes];
+    
+    [int1 toByteArrayUnsigned:[data mutableBytes]];
+    JKBigInteger *result = [[JKBigInteger alloc] initWithUnsignedByteArray:[data bytes] andSize:(int)[data length]];
+    
+    XCTAssertEqualObjects([result stringValueWithRadix:10], [int1 stringValueWithRadix:10]);
+}
+
+- (void)testInitWithSignedByteArray0 {
+    JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"939202309485773939498585839393498477393984"];
+    NSMutableData* data = [[NSMutableData alloc] initWithCapacity:[int1 countBytes]];
+    data.length = [int1 countSignedBytes];
+    
+    [int1 toByteArraySigned:[data mutableBytes]];
+    JKBigInteger *result = [[JKBigInteger alloc] initWithSignedByteArray:[data bytes] andSize:(int)[data length]];
+    
+    XCTAssertEqualObjects([result stringValueWithRadix:10], [int1 stringValueWithRadix:10]);
+}
+
+- (void)testInitWithSignedByteArray1 {
+    JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"-939202309485773939498585839393498477393984"];
+    NSMutableData* data = [[NSMutableData alloc] initWithCapacity:[int1 countBytes]];
+    data.length = [int1 countSignedBytes];
+    
+    [int1 toByteArraySigned:[data mutableBytes]];
+    JKBigInteger *result = [[JKBigInteger alloc] initWithSignedByteArray:[data bytes] andSize:(int)[data length]];
+    
+    XCTAssertEqualObjects([result stringValueWithRadix:10], [int1 stringValueWithRadix:10]);
+}
+
 // Auto generated tests below
 
 - (void)testAdd0 {

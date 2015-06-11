@@ -19,6 +19,8 @@
 - (id)initWithString:(NSString *)string andRadix:(int)radix;
 - (id)initWithCString:(char *)cString;
 - (id)initWithCString:(char *)cString andRadix:(int)radix;
+- (id)initWithUnsignedByteArray:(const unsigned char*)byteArray andSize:(int)size;
+- (id)initWithSignedByteArray:(const unsigned char*)byteArray andSize:(int)size;
 
 - (id)add:(JKBigInteger *)bigInteger;
 - (id)subtract:(JKBigInteger *)bigInteger;
@@ -50,6 +52,7 @@
 - (NSString *)description;
 
 - (unsigned int)countBytes;
+- (unsigned int)countSignedBytes;
 - (void)toByteArraySigned: (unsigned char*) byteArray;
 - (void)toByteArrayUnsigned: (unsigned char*) byteArray;
 
