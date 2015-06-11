@@ -376,7 +376,7 @@
 		1885AB49178DC63100249C30 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastTestingUpgradeCheck = 0510;
+				LastTestingUpgradeCheck = 0630;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Jānis Kiršteins";
 				TargetAttributes = {
