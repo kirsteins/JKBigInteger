@@ -25,6 +25,7 @@
 - (id)remainder:(JKBigDecimal *)bigInteger;
 //- (NSArray *)divideAndRemainder:(JKBigDecimal *)bigInteger;
 
+- (NSComparisonResult) compare:(JKBigDecimal *)other;
 - (id)pow:(unsigned int)exponent;
 
 - (id)negate;

@@ -36,6 +36,7 @@
 		1885AB80178EF27300249C30 /* tommath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1885AB7C178EF27300249C30 /* tommath.c */; };
 		18DE342F17970327001A798E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885AB72178EF21500249C30 /* main.m */; };
 		A1DAE6961AF7028B00BCA70D /* JKBigDecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DAE6951AF7028B00BCA70D /* JKBigDecimal.m */; };
+		C5D6D4A01B77AAD7005A57AB /* JKBigDecimal_Unit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D6D49F1B77AAD7005A57AB /* JKBigDecimal_Unit_Tests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		1885AB84178EFBF100249C30 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A1DAE6941AF7028B00BCA70D /* JKBigDecimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JKBigDecimal.h; path = JKBigInteger/JKBigDecimal.h; sourceTree = "<group>"; };
 		A1DAE6951AF7028B00BCA70D /* JKBigDecimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JKBigDecimal.m; path = JKBigInteger/JKBigDecimal.m; sourceTree = "<group>"; };
+		C5D6D49F1B77AAD7005A57AB /* JKBigDecimal_Unit_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKBigDecimal_Unit_Tests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 			children = (
 				187E886F17959223007E4A8E /* Unit_Tests.h */,
 				187E887017959223007E4A8E /* Unit_Tests.m */,
+				C5D6D49F1B77AAD7005A57AB /* JKBigDecimal_Unit_Tests.m */,
 				187E886A17959223007E4A8E /* Supporting Files */,
 			);
 			path = "Unit Tests";
@@ -482,6 +485,7 @@
 				187E887117959223007E4A8E /* Unit_Tests.m in Sources */,
 				187E88821795AF90007E4A8E /* JKBigInteger.m in Sources */,
 				187E88831795AFB4007E4A8E /* tommath.c in Sources */,
+				C5D6D4A01B77AAD7005A57AB /* JKBigDecimal_Unit_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
