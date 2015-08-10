@@ -36,7 +36,8 @@
 		1885AB80178EF27300249C30 /* tommath.c in Sources */ = {isa = PBXBuildFile; fileRef = 1885AB7C178EF27300249C30 /* tommath.c */; };
 		18DE342F17970327001A798E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1885AB72178EF21500249C30 /* main.m */; };
 		A1DAE6961AF7028B00BCA70D /* JKBigDecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DAE6951AF7028B00BCA70D /* JKBigDecimal.m */; };
-		C5D6D4A01B77AAD7005A57AB /* JKBigDecimal_Unit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D6D49F1B77AAD7005A57AB /* JKBigDecimal_Unit_Tests.m */; };
+		C5C881351B782C1900BDDBA6 /* JKBigDecimal_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C881321B782C0400BDDBA6 /* JKBigDecimal_iOSTests.m */; };
+		C5C881361B782C2400BDDBA6 /* JKBigDecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = A1DAE6951AF7028B00BCA70D /* JKBigDecimal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +103,7 @@
 		1885AB84178EFBF100249C30 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A1DAE6941AF7028B00BCA70D /* JKBigDecimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JKBigDecimal.h; path = JKBigInteger/JKBigDecimal.h; sourceTree = "<group>"; };
 		A1DAE6951AF7028B00BCA70D /* JKBigDecimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JKBigDecimal.m; path = JKBigInteger/JKBigDecimal.m; sourceTree = "<group>"; };
-		C5D6D49F1B77AAD7005A57AB /* JKBigDecimal_Unit_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKBigDecimal_Unit_Tests.m; sourceTree = "<group>"; };
+		C5C881321B782C0400BDDBA6 /* JKBigDecimal_iOSTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKBigDecimal_iOSTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +175,7 @@
 		1812E89019728817007B55DB /* JKBigInteger iOS Tests */ = {
 			isa = PBXGroup;
 			children = (
+				C5C881321B782C0400BDDBA6 /* JKBigDecimal_iOSTests.m */,
 				1812E89619728817007B55DB /* JKBigInteger_iOSTests.m */,
 				1812E89119728817007B55DB /* Supporting Files */,
 			);
@@ -202,7 +204,6 @@
 			children = (
 				187E886F17959223007E4A8E /* Unit_Tests.h */,
 				187E887017959223007E4A8E /* Unit_Tests.m */,
-				C5D6D49F1B77AAD7005A57AB /* JKBigDecimal_Unit_Tests.m */,
 				187E886A17959223007E4A8E /* Supporting Files */,
 			);
 			path = "Unit Tests";
@@ -472,7 +473,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C881361B782C2400BDDBA6 /* JKBigDecimal.m in Sources */,
 				1812E89F19728827007B55DB /* JKBigInteger.m in Sources */,
+				C5C881351B782C1900BDDBA6 /* JKBigDecimal_iOSTests.m in Sources */,
 				1812E89719728817007B55DB /* JKBigInteger_iOSTests.m in Sources */,
 				1812E8A11972882C007B55DB /* tommath.c in Sources */,
 			);
@@ -485,7 +488,6 @@
 				187E887117959223007E4A8E /* Unit_Tests.m in Sources */,
 				187E88821795AF90007E4A8E /* JKBigInteger.m in Sources */,
 				187E88831795AFB4007E4A8E /* tommath.c in Sources */,
-				C5D6D4A01B77AAD7005A57AB /* JKBigDecimal_Unit_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
