@@ -154,6 +154,24 @@
 //    
 //}
 
+-(NSComparisonResult) compare:(JKBigDecimal *)other {
+    JKBigDecimal *tens = [[JKBigDecimal alloc] initWithString:@"10"];
+    JKBigInteger *scaledNum;
+    JKBigInteger *scaledCompareTo;
+    
+    if (figure > other.figure){
+        tens = [tens pow:(int)figure];
+    } else {
+        tens = [tens pow:(int)other.figure];
+    }
+    //scale my value to integer value
+    scaledNum = [[JKBigInteger alloc] initWithString:[[self multiply:tens] stringValue]];
+    //scale other value to integer
+    scaledCompareTo = [[JKBigInteger alloc] initWithString:[[other multiply:tens] stringValue]];
+    NSComparisonResult compareBigInteger = [scaledNum compare:scaledCompareTo];
+    return compareBigInteger;
+}
+
 - (id)pow:(unsigned int)exponent
 {
     NSInteger totalFigure = figure*exponent;

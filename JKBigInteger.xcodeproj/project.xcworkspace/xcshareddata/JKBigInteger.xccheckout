@@ -10,29 +10,29 @@
 	<string>JKBigInteger</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>CD31836B-D1D2-4281-A144-F35F1F85FF8F</key>
-		<string>https://github.com/kirsteins/JKBigInteger.git</string>
+		<key>6DA9CB8CB0F24CF112C0DC99874F6159E016D3FA</key>
+		<string>github.com:hphu/JKBigInteger.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>JKBigInteger.xcodeproj/project.xcworkspace</string>
+	<string>JKBigInteger.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>CD31836B-D1D2-4281-A144-F35F1F85FF8F</key>
+		<key>6DA9CB8CB0F24CF112C0DC99874F6159E016D3FA</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/kirsteins/JKBigInteger.git</string>
+	<string>github.com:hphu/JKBigInteger.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>CD31836B-D1D2-4281-A144-F35F1F85FF8F</string>
+	<string>6DA9CB8CB0F24CF112C0DC99874F6159E016D3FA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>CD31836B-D1D2-4281-A144-F35F1F85FF8F</string>
+			<string>6DA9CB8CB0F24CF112C0DC99874F6159E016D3FA</string>
 			<key>IDESourceControlWCCName</key>
 			<string>JKBigInteger</string>
 		</dict>
