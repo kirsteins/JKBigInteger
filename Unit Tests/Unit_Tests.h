@@ -10,4 +10,7 @@
 
 @interface Unit_Tests : XCTestCase
 
+- (void)testSecureArchivingPositiveInt API_AVAILABLE(ios(11), macos(10.13));
+- (void)testSecureArchivingNegativeInt API_AVAILABLE(ios(11), macos(10.13));
+
 @end
