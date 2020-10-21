@@ -11,6 +11,9 @@
 
 @interface JKBigInteger_iOSTests : XCTestCase
 
+- (void)testSecureArchivingPositiveInt API_AVAILABLE(ios(11), macos(10.13));
+- (void)testSecureArchivingNegativeInt API_AVAILABLE(ios(11), macos(10.13));
+
 @end
 
 @implementation JKBigInteger_iOSTests
@@ -53,6 +56,40 @@
 
     int2 = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
     XCTAssertEqualObjects([int1 stringValue], [int2 stringValue], @"Test archiving failed!");
+}
+
+- (void)testSecureArchivingPositiveInt {
+    NSError *int1Error;
+    JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"1111222233334444555566667777888899990000"];
+    NSData *intData = [NSKeyedArchiver archivedDataWithRootObject:int1
+                                            requiringSecureCoding:YES
+                                                            error:&int1Error];
+    XCTAssertNil(int1Error, "archivedDataWithRootObject failed");
+
+    NSError *int2Error;
+    JKBigInteger *int2 = [NSKeyedUnarchiver unarchivedObjectOfClass:[JKBigInteger class]
+                                                           fromData:intData
+                                                              error:&int2Error];
+    XCTAssertNil(int2Error, "unarchivedObjectOfClass failed");
+
+    XCTAssertEqualObjects([int1 stringValue], [int2 stringValue], @"Test secure archiving failed!");
+}
+
+- (void)testSecureArchivingNegativeInt {
+    NSError *int1Error;
+    JKBigInteger *int1 = [[JKBigInteger alloc] initWithString:@"-123471238940713294701327508917230516230561320512352315021305012395091032950923520395013258623185465463545681428354162345612435416523"];
+    NSData *intData = [NSKeyedArchiver archivedDataWithRootObject:int1
+                                            requiringSecureCoding:YES
+                                                            error:&int1Error];
+    XCTAssertNil(int1Error, "archivedDataWithRootObject failed");
+
+    NSError *int2Error;
+    JKBigInteger *int2 = [NSKeyedUnarchiver unarchivedObjectOfClass:[JKBigInteger class]
+                                                           fromData:intData
+                                                              error:&int2Error];
+    XCTAssertNil(int2Error, "unarchivedObjectOfClass failed");
+
+    XCTAssertEqualObjects([int1 stringValue], [int2 stringValue], @"Test secure archiving failed!");
 }
 
 - (void)testDescription0 {

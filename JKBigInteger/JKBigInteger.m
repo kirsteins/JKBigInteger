@@ -12,6 +12,10 @@
     mp_int m_value;
 }
 
++ (BOOL)supportsSecureCoding {
+	return YES;
+}
+
 - (id)initWithValue:(mp_int *)value {
 
     self = [super init];
@@ -89,7 +93,7 @@
 
 		mp_init_size(&m_value, alloc);
 		
-		NSData *data = (NSData *)[decoder decodeObjectForKey:@"JKBigIntegerDP"];
+		NSData *data = (NSData *)[decoder decodeObjectOfClass:[NSData class] forKey:@"JKBigIntegerDP"];
         mp_digit *temp = (mp_digit *)[data bytes];
         
         for (unsigned int i = 0; i < alloc; ++i) {
